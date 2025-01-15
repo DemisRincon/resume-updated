@@ -71,14 +71,19 @@ export const Grid = styled.div`
   }
 `;
 
-const Side: React.FC<SideProps> = ({ sideData: { profile, ...rest } }) => {
-  console.log(rest);
-  const { contact, languages, softSkills, frameworksTools } = rest;
-
+const Side: React.FC<SideProps> = ({
+  sideData: { profile, contact, languages, softSkills, frameworksTools },
+}) => {
   return (
     <Container>
       <ImageContainer>
-        <ProfileImage src={profile.photo} alt="Profile image" />
+        <ProfileImage
+          src={profile.photo}
+          alt="Profile image"
+          width={200}
+          height={200}
+          priority
+        />
       </ImageContainer>
       <Name>{profile.name}</Name>
       <JobTitle>{profile.position}</JobTitle>

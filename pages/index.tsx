@@ -1,9 +1,11 @@
 import React from "react";
-import { mainData, sideData } from "./_lib/data";
+import Head from "next/head";
 import styled from "styled-components";
+import { mainData, sideData } from "./_lib/data";
 import Principal from "./_components/Principal";
 import Side from "./_components/Side";
 import { colors, breakpoints } from "./_lib/global";
+import StyledComponentsRegistry from "./_lib/registry";
 
 const MainContainer = styled.div`
   background-color: ${colors.light};
@@ -20,8 +22,6 @@ const MainContainer = styled.div`
   }
 `;
 
-import Head from "next/head";
-
 const MetaTags = () => (
   <Head>
     <title>Resume Demis Rincon</title>
@@ -31,7 +31,7 @@ const MetaTags = () => (
   </Head>
 );
 
-const Resume = () => {
+const Resume: React.FC = () => {
   return (
     <>
       <MetaTags />
