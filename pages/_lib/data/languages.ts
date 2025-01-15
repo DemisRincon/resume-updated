@@ -1,12 +1,6 @@
-interface Language {
-  name: string;
-  list: {
-    title: string;
-    ghostTitle: string;
-  }[];
-}
+import { SideItemInterface } from "../interfaceses";
 
-const languages: Language = {
+const languages: SideItemInterface = {
   name: "LANGUAGES",
   list: [
     {

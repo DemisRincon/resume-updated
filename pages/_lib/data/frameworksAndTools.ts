@@ -8,17 +8,9 @@ import {
   SiMongodb,
 } from "react-icons/si";
 import { MdNightlight } from "react-icons/md";
-import { IconType } from "react-icons";
+import { SideItemInterface } from "../interfaceses";
 
-interface FrameworksTools {
-  name: string;
-  list: {
-    title: string;
-    icon: IconType;
-  }[];
-}
-
-const frameworksTools: FrameworksTools = {
+const frameworksTools: SideItemInterface = {
   name: "FRAMEWORKS & TOOLS",
   list: [
     { title: "React.js", icon: FaReact },

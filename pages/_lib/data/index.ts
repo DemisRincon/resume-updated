@@ -6,19 +6,20 @@ import frameworksTools from "./frameworksAndTools";
 import about from "./about";
 import education from "./education";
 import experience from "./experience";
+import { MainSectionInterface, SideItemInterface } from "../interfaceses";
 
-interface SideData {
+export interface SideData {
   profile: typeof profile;
-  contact: typeof contact;
-  languages: typeof languages;
-  softSkills: typeof softSkills;
-  frameworksTools: typeof frameworksTools;
+  contact: SideItemInterface;
+  languages: SideItemInterface;
+  softSkills: SideItemInterface;
+  frameworksTools: SideItemInterface;
 }
 
-interface MainData {
-  about: typeof about;
-  education: typeof education;
-  experience: typeof experience;
+export interface MainData {
+  about: MainSectionInterface;
+  education: MainSectionInterface;
+  experience: MainSectionInterface;
 }
 
 const mainData: MainData = { about, education, experience };
@@ -31,6 +32,4 @@ const sideData: SideData = {
   frameworksTools,
 };
 
-const data = { sideData, mainData };
-
-export default data;
+export { sideData, mainData };

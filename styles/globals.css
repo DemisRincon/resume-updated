@@ -40,3 +40,12 @@ a {
     color-scheme: dark;
   }
 }
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}

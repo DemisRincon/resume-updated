@@ -1,19 +1,7 @@
-import { IconType } from "react-icons";
 import { FaGraduationCap } from "react-icons/fa";
+import { MainSectionInterface } from "../interfaceses";
 
-interface Education {
-  title: string;
-  icon: IconType;
-  list: {
-    position: string;
-    enterprise: string;
-    time: string;
-    description: string;
-    tasks: string[];
-  }[];
-}
-
-const education: Education = {
+const education: MainSectionInterface = {
   title: "EDUCATION",
   icon: FaGraduationCap,
   list: [

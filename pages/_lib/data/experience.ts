@@ -1,14 +1,6 @@
-interface Experience {
-  title: string;
-  list: {
-    position: string;
-    enterprise: string;
-    time: string;
-    description: string;
-  }[];
-}
+import { MainSectionInterface } from "../interfaceses";
 
-const experience: Experience = {
+const experience: MainSectionInterface = {
   title: "EXPERIENCE",
   list: [
     {
