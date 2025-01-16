@@ -19,11 +19,6 @@ const Container = styled.div`
   @media (min-width: ${breakpoints.desktop}) {
     width: 30%;
   }
-  @media print {
-    background-color: ${colors.light};
-    color: ${colors.dark};
-    border-right: 1px solid ${colors.dark};
-  }
 `;
 
 const ImageContainer = styled.div`
@@ -44,17 +39,15 @@ const ProfileImage = styled(Image)`
 const Name = styled.h1`
   text-align: center;
   color: ${colors.light};
-  @media print {
-    color: ${colors.dark};
-  }
+  margin: 20px 0;
 `;
 
-export const JobTitle = styled.h4`
+const JobTitle = styled.h4`
   text-align: center;
-  margin: 5px;
+  margin: 10px 0;
 `;
 
-export const Grid = styled.div`
+const Grid = styled.div`
   display: flex;
   flex-direction: column;
 

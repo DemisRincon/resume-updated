@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 interface Breakpoints {
   phone: string;
   tablet: string;

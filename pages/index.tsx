@@ -5,7 +5,6 @@ import { mainData, sideData } from "./_lib/data";
 import Principal from "./_components/Principal";
 import Side from "./_components/Side";
 import { colors, breakpoints } from "./_lib/global";
-import StyledComponentsRegistry from "./_lib/registry";
 
 const MainContainer = styled.div`
   background-color: ${colors.light};
@@ -13,10 +12,12 @@ const MainContainer = styled.div`
   max-width: 100vw;
   width: 1080px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: stretch;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+  font-size: 1.2rem;
+  line-height: 1.2;
   @media (min-width: ${breakpoints.desktop}) {
     flex-direction: row;
   }

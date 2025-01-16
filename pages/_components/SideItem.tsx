@@ -1,22 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { SideItemInterface } from "../_lib/interfaceses";
-import { colors } from "../_lib/global";
+import { breakpoints, colors } from "../_lib/global";
 
 export const Container = styled.div`
   display: flex;
-  padding: 0 20px;
   flex-direction: column;
   justify-content: start;
   align-items: space-between;
-  margin: 10px 0;
+  margin: 30px;
+  max-width: 100%;
   justify-self: center;
-  @media print {
-    margin: 5px 0;
+  @media (min-width: ${breakpoints.tablet}) {
+    margin: 0;
   }
 `;
 
 export const Title = styled.h4`
+  margin: 15px 0;
   &&:after {
     background-color: ${colors.light};
     content: "";
@@ -30,6 +31,7 @@ export const Title = styled.h4`
 export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
+  margin: 3px 0;
 `;
 
 export const IconContainer = styled.div`
