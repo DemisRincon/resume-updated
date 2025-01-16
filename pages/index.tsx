@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import { mainData, sideData } from "./_lib/data";
-import Principal from "./_components/Principal";
-import Side from "./_components/Side";
-import { colors, breakpoints } from "./_lib/global";
+import { mainData, sideData } from "../_lib/data";
+import Principal from "../_components/Principal";
+import Side from "../_components/Side";
+import { colors, breakpoints } from "../_lib/global";
 
 const MainContainer = styled.div`
   background-color: ${colors.light};
