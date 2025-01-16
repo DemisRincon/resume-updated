@@ -20,6 +20,8 @@ const MainContainer = styled.div`
   line-height: 1.2;
   @media (min-width: ${breakpoints.desktop}) {
     flex-direction: row;
+    font-size: 1rem;
+    line-height: 1;
   }
 `;
 

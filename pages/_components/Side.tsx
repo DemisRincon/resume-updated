@@ -39,7 +39,8 @@ const ProfileImage = styled(Image)`
 const Name = styled.h1`
   text-align: center;
   color: ${colors.light};
-  margin: 20px 0;
+  margin: 20px;
+  max-width: 100%;
 `;
 
 const JobTitle = styled.h4`

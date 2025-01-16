@@ -8,8 +8,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: space-between;
-  margin: 30px;
+  margin: 15px 30px;
   max-width: 100%;
+  line-height: 1.3;
 `;
 
 const Title = styled.h4`
