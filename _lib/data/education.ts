@@ -7,7 +7,7 @@ const education: MainSectionInterface = {
   list: [
     {
       position: "React Native Developer",
-      enterprise: "Bright Coders Academy (Magmalabs)",
+      enterprise: "Bright Coders Academy",
       time: "2021",
       description: "Full course for React Native Developer.",
       tasks: [

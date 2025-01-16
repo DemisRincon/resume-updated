@@ -7,8 +7,8 @@ import {
   SiExpress,
   SiMongodb,
 } from "react-icons/si";
-import { MdNightlight } from "react-icons/md";
 import { SideItemInterface } from "../interfaceses";
+import { BsGithub } from "react-icons/bs";
 
 const frameworksTools: SideItemInterface = {
   name: "FRAMEWORKS & TOOLS",
@@ -19,10 +19,10 @@ const frameworksTools: SideItemInterface = {
     { title: "Node.js", icon: FaNode },
     { title: "styled-components", icon: SiStyledcomponents },
     { title: "Framer Motion", icon: SiFramer },
-    { title: "Nightwatch", icon: MdNightlight },
+    { title: "Github", icon: BsGithub },
     { title: "Newman", icon: SiPostman },
     { title: "Express.js", icon: SiExpress },
-    { title: "Mongo", icon: SiMongodb },
+    { title: "Mongodb", icon: SiMongodb },
   ],
 };
 

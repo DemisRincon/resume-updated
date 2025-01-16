@@ -4,7 +4,8 @@ import { MainSectionInterface } from "../interfaceses";
 const about: MainSectionInterface = {
   title: "ABOUT ME",
   icon: FaRebel,
-  description: `Currently working for a U.S. contractor, I have utilized several frameworks, including React.js, Next.js, Express.js, and React Native, as well as databases like MongoDB. My hobbies include playing video games, playing Magic: The Gathering (MTG), and teaching JavaScript to other developers as a volunteer at Bright Coders Academy.`,
+  description: `
+I'm a passionate Software Developer with over six years of experience in building dynamic web applications. I have participated in the development of applications for various industries, leading significant projects. Proficient in React.js, Next.js, Node.js, Express.js, and MongoDB. My hobbies include playing video games, playing Magic: The Gathering (MTG), and volunteering as a JavaScript instructor at Bright Coders Academy.`,
 };
 
 export default about;

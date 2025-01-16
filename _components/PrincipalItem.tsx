@@ -8,12 +8,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: space-between;
-  margin: 15px 30px;
+  margin: 0 30px;
   max-width: 100%;
   line-height: 1.3;
   @media print {
-    margin: 5px 30px;
-    line-height: 1;
+    margin: 0 30px;
+    line-height: 1.1;
   }
 `;
 
@@ -33,6 +33,10 @@ const DetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 15px 0;
+  @media print {
+    font-size: 0.8rem;
+    margin: 10px 0;
+  }
 `;
 
 const PositionWrapper = styled.div`
@@ -40,19 +44,19 @@ const PositionWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
+  margin: 15px 0;
 
   span {
     color: ${colors.lightGreen};
   }
 `;
 
-const Enterprise = styled.h5`
+const Enterprise = styled.span`
   color: ${colors.lightBlue};
   margin: 10px 0;
-
   @media print {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    margin: 5px 0;
   }
 `;
 
@@ -69,10 +73,13 @@ const PrincipalItem: React.FC<MainSectionInterface> = ({
         list.map((item, index) => (
           <DetailsContainer key={index}>
             <PositionWrapper>
-              <b>{item.position}</b>
+              <b>
+                {item.position}
+                {` `}
+                <Enterprise>{`(${item.enterprise})`}</Enterprise>
+              </b>
               <span>{item.time}</span>
             </PositionWrapper>
-            <Enterprise>{item.enterprise}</Enterprise>
             <p>{item.description}</p>
           </DetailsContainer>
         ))}
