@@ -11,6 +11,10 @@ const Container = styled.div`
   margin: 15px 30px;
   max-width: 100%;
   line-height: 1.3;
+  @media print {
+    margin: 5px 30px;
+    line-height: 1;
+  }
 `;
 
 const Title = styled.h4`
@@ -46,6 +50,10 @@ const PositionWrapper = styled.div`
 const Enterprise = styled.h5`
   color: ${colors.lightBlue};
   margin: 10px 0;
+
+  @media print {
+    font-size: 0.8rem;
+  }
 `;
 
 const PrincipalItem: React.FC<MainSectionInterface> = ({

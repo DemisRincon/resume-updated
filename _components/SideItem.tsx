@@ -14,6 +14,9 @@ export const Container = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
     margin: 0;
   }
+  @media print {
+    margin: 10px 30px;
+  }
 `;
 
 export const Title = styled.h4`

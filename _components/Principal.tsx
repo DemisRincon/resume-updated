@@ -15,6 +15,9 @@ const Container = styled.div`
   @media (min-width: ${breakpoints.desktop}) {
     width: 70%;
   }
+  @media print {
+    width: 70%;
+  }
 `;
 
 const Principal: React.FC<PrincipalProps> = ({

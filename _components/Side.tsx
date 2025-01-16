@@ -19,6 +19,9 @@ const Container = styled.div`
   @media (min-width: ${breakpoints.desktop}) {
     width: 30%;
   }
+  @media print {
+    width: 30%;
+  }
 `;
 
 const ImageContainer = styled.div`

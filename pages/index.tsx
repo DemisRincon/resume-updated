@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import { mainData, sideData } from "../_lib/data";
 import Principal from "../_components/Principal";
 import Side from "../_components/Side";
 import { colors, breakpoints } from "../_lib/global";
+import { useReactToPrint } from "react-to-print";
 
 const MainContainer = styled.div`
   background-color: ${colors.light};
@@ -23,6 +24,24 @@ const MainContainer = styled.div`
     font-size: 1rem;
     line-height: 1;
   }
+  @media print {
+    flex-direction: row;
+    font-size: 0.8rem;
+  }
+`;
+
+const Button = styled.button`
+  background-color: ${colors.dark};
+  color: ${colors.light};
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  cursor: pointer;
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: 1rem;
+  }
 `;
 
 const MetaTags = () => (
@@ -35,13 +54,16 @@ const MetaTags = () => (
 );
 
 const Resume: React.FC = () => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const reactToPrintFn = useReactToPrint({ contentRef });
   return (
     <>
       <MetaTags />
-      <MainContainer>
+      <MainContainer ref={contentRef}>
         <Side sideData={sideData} />
         <Principal mainData={mainData} />
       </MainContainer>
+      <Button onClick={() => reactToPrintFn()}>Print</Button>
     </>
   );
 };
