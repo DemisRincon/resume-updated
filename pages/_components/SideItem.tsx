@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: space-between;
   margin: 15px 30px;
   max-width: 100%;
-  justify-self: center;
+  justify-self: start;
   @media (min-width: ${breakpoints.tablet}) {
     margin: 0;
   }
@@ -57,9 +57,6 @@ const withLink = (Component: React.FC<WithLinkProps>) => {
     return <Component {...props} />;
   };
 
-  WrappedComponent.displayName = `withLink(${
-    Component.displayName || Component.name || "Component"
-  })`;
   return WrappedComponent;
 };
 
@@ -73,14 +70,12 @@ const SideItem: React.FC<SideItemInterface> = ({ list, name }) => {
           href={typeof item.href === "string" ? item.href : undefined}
           key={index.toString()}
         >
-          <ItemContainer key={index}>
-            {item.icon && (
-              <IconContainer>
-                <item.icon />
-              </IconContainer>
-            )}
-            <span>{item.title}</span>
-          </ItemContainer>
+          {item.icon && (
+            <IconContainer>
+              <item.icon />
+            </IconContainer>
+          )}
+          <span>{item.title}</span>
         </ItemContainerWithLink>
       ))}
     </Container>
