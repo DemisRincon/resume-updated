@@ -19,12 +19,12 @@ const contact: SideItemInterface = {
     {
       title: "linkedin.com/in/demisrincon/",
       icon: FaLinkedin,
-      href: "linkedin.com/in/demisrincon/",
+      href: "https://www.linkedin.com/in/demisrincon/",
     },
     {
       title: "github.com/DemisRincon",
       icon: FaGithub,
-      href: "github.com/DemisRincon",
+      href: "https://github.com/DemisRincon",
     },
   ],
 };

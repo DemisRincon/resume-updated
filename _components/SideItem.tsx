@@ -37,7 +37,6 @@ export const ItemContainer = styled.div`
 export const IconContainer = styled.div`
   margin-right: 10px;
 `;
-import Link from "next/link";
 
 interface WithLinkProps {
   href?: string;
@@ -49,9 +48,9 @@ const withLink = (Component: React.FC<WithLinkProps>) => {
   const WrappedComponent: React.FC<WithLinkProps> = ({ href, ...props }) => {
     if (href) {
       return (
-        <Link href={href} passHref>
+        <a href={href} target="_blank">
           <Component {...props} />
-        </Link>
+        </a>
       );
     }
     return <Component {...props} />;
