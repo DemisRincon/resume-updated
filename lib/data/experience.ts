@@ -9,7 +9,7 @@ const experience = {
       enterprise: "Travelport",
       time: "Jun 2023 - Present",
       description:
-        "I perform maintenance on 25 React components and have led a project to develop automated contract testing for approximately 200 APIs using Newman and GitHub Actions. Additionally. Part of my work involves providing guidance to junior developers in accomplishing frontend, backend, and SDET tasks.",
+        "I perform maintenance on 25 React components and have led a project to develop automated contract testing for approximately 200 APIs using Newman and GitHub Actions. Part of my work involves providing guidance to junior developers in accomplishing frontend, backend, and SDET tasks.",
     },
     {
       position: "Mentor",
@@ -23,7 +23,7 @@ const experience = {
       enterprise: "Sancrisoft",
       time: "Jun 2021 - Jun 2023",
       description:
-        "Worked on diverse client projects using React.js, Next.js, Express.js, React Native, and MongoDB. Developed five different applications, including data capture for Oculus, cruise administration systems for Royal Caribbean, complex web pages for PMG Advertising Agency, and COOP truck rental management systems. Led one of these projects.",
+        "Worked on diverse client projects using React.js, Next.js, Express.js, React Native, and MongoDB. Developed five different applications, including data capture for Oculus, cruise administration systems for Royal Caribbean, complex web pages for PMG Advertising Agency, and COOP truck rental management systems. I led one of these projects.",
     },
     {
       position: "Software Developer",
