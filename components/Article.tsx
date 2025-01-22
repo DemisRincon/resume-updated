@@ -8,8 +8,8 @@ interface ArticleProps {
     name: string;
     list: {
       title: string;
-      icon: IconType;
-      href: string | boolean;
+      icon?: IconType;
+      href?: string | boolean;
     }[];
   };
 }
