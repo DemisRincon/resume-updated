@@ -7,7 +7,7 @@ A template for developers to showcase their profiles online.
 1. **Clone the repository:**
 
    ```sh
-   git clone <https://github.com/DemisRincon/resume-updated>
+   git clone https://github.com/DemisRincon/resume-updated
    ```
 
 2. **Modify the data:**
