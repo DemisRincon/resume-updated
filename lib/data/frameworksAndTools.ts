@@ -7,10 +7,9 @@ import {
   SiExpress,
   SiMongodb,
 } from "react-icons/si";
-import { SideItemInterface } from "../interfaceses";
 import { BsGithub } from "react-icons/bs";
 
-const frameworksTools: SideItemInterface = {
+const frameworksTools = {
   name: "FRAMEWORKS & TOOLS",
   list: [
     { title: "React.js", icon: FaReact },

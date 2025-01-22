@@ -1,6 +1,4 @@
-import { SideItemInterface } from "../interfaceses";
-
-const softSkills: SideItemInterface = {
+const softSkills = {
   name: "SOFT SKILLS",
   list: [
     { title: "Conflict managment" },

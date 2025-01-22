@@ -1,6 +1,4 @@
-import { SideItemInterface } from "../interfaceses";
-
-const languages: SideItemInterface = {
+const languages = {
   name: "LANGUAGES",
   list: [
     {
