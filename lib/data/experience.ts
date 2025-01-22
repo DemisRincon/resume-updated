@@ -1,14 +1,15 @@
-import { MainSectionInterface } from "../interfaceses";
+import { GrUserWorker } from "react-icons/gr";
 
-const experience: MainSectionInterface = {
-  title: "EXPERIENCE",
+const experience = {
+  name: "EXPERIENCE",
+  icon: GrUserWorker,
   list: [
     {
       position: "Senior Software Developer",
       enterprise: "Travelport",
       time: "Jun 2023 - Present",
       description:
-        "I perform maintenance on 25 React components and have led a project to develop automated contract testing for approximately 200 APIs using Newman and GitHub Actions. Additionally, I am building Nightwatch/Cucumber tests for UI testing. Part of my work involves providing guidance to junior developers in accomplishing frontend, backend, and SDET tasks.",
+        "I perform maintenance on 25 React components and have led a project to develop automated contract testing for approximately 200 APIs using Newman and GitHub Actions. Additionally. Part of my work involves providing guidance to junior developers in accomplishing frontend, backend, and SDET tasks.",
     },
     {
       position: "Mentor",

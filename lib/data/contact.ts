@@ -1,9 +1,8 @@
 import { AiFillPhone } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
-import { SideItemInterface } from "../interfaceses";
 
-const contact: SideItemInterface = {
+const contact = {
   name: "CONTACT",
   list: [
     {
