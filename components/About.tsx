@@ -34,11 +34,7 @@ const Conatiner = styled.div`
 const Pharagraph = styled.p`
   width: 95%;
   line-height: 1.5;
-  font-size: 1rem;
   color: ${({ theme }) => theme.colors.black};
-  @media print {
-    font-size: 0.9rem;
-  }
 `;
 
 export default About;

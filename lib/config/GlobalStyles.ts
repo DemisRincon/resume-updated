@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: ${poppins};
     }
  
-    h1, h2, h3, h4, h5 {
+    h1, h2, h3, h4, h5, h6 {
         font-size: 2rem;
         font-weight: 600;
         color: ${defaultTheme.colors.white};
@@ -32,7 +32,18 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h5{
-        font-size: 1rem;
+        font-size: 1.5rem;
+        
+        @media (min-width: ${defaultTheme.breakpoints.desktop}), print {
+            font-size: 1rem;
+        }
+    }
+
+    h6{
+        font-size: 1.1rem;
+        @media (min-width: ${defaultTheme.breakpoints.desktop}), print {
+            font-size: 1rem;
+        }
     }
 
     ul{
@@ -43,7 +54,19 @@ const GlobalStyles = createGlobalStyle`
     li{
         text-align: start;
     }
-
+    p,li{
+        font-size: 1.2rem;
+    
+        @media (min-width: ${defaultTheme.breakpoints.tablet}) {
+            font-size: 1.5rem;
+        }
+        @media (min-width: ${defaultTheme.breakpoints.desktop}){
+            font-size: 1rem;
+        }
+        @media print {
+            font-size: 0.9rem;
+        }
+    }
     a{
         text-decoration: none;
         color: ${defaultTheme.colors.white};

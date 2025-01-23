@@ -48,7 +48,6 @@ const Container = styled.article`
 `;
 
 const Content = styled.div`
-  font-size: 1rem;
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
   max-width: 100%;
@@ -64,7 +63,6 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   display: flex;
-  font-size: 1rem;
 `;
 
 export default Article;

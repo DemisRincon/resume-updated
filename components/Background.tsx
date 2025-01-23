@@ -32,10 +32,10 @@ const Background: React.FC<BackgroundProps> = ({
       {list.map((item, index) => (
         <ItemContainer key={index}>
           <TopContainer>
-            <TopContainer>
+            <InnerTopContainer>
               <H5>{item.position}</H5>
               <H6>{item.enterprise}</H6>
-            </TopContainer>
+            </InnerTopContainer>
             <H6>{item.time}</H6>
           </TopContainer>
           {item.description && <Pharagraph>{item.description}</Pharagraph>}
@@ -54,21 +54,25 @@ const Container = styled.div`
 `;
 
 const H5 = styled.h5`
+  display: inline-block;
   color: ${({ theme }) => theme.colors.black};
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0.5rem;
   margin-left: 0;
+  text-align: left;
+  max-width: 100%;
 `;
 
 const H6 = styled.h6`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   margin: 0.5rem;
+  margin-left: 0;
   color: ${({ theme }) => theme.colors.lightGreen};
+  text-align: left;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    margin-left: 0.5rem;
+  }
 `;
+
 const ItemContainer = styled.div`
   width: 95%;
 `;
@@ -76,14 +80,24 @@ const ItemContainer = styled.div`
 const TopContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    flex-direction: row;
+  }
+`;
+
+const InnerTopContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    flex-direction: row;
+  }
 `;
 
 const Pharagraph = styled.p`
   line-height: 1.5;
-  font-size: 1rem;
   color: ${({ theme }) => theme.colors.black};
-  @media print {
-    font-size: 0.9rem;
-  }
 `;
 export default Background;
