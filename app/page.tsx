@@ -19,11 +19,18 @@ const Home = () => {
   const reactToPrintFn = useReactToPrint({ contentRef });
   return (
     <MainContainer>
+      <MobileContainer>
+        <StyledImage src="/photo.jpg" />
+        <h1>{profile.name}</h1>
+        <h4>{profile.position}</h4>
+      </MobileContainer>
       <InnerContainer ref={contentRef}>
         <LeftContainer>
-          <StyledImage src="/photo.jpg" />
-          <h1>{profile.name}</h1>
-          <h4>{profile.position}</h4>
+          <DesktopContainer>
+            <StyledImage src="/photo.jpg" />
+            <h1>{profile.name}</h1>
+            <h4>{profile.position}</h4>
+          </DesktopContainer>
           <Article data={contact} />
           <Article data={languages} />
           <Article data={softSkills} />
@@ -51,14 +58,19 @@ const MainContainer = styled.div`
 `;
 
 const InnerContainer = styled.div`
-  margin: 50px 0;
   display: flex;
   align-items: start;
   justify-content: center;
+  flex-direction: column-reverse;
   max-width: ${({ theme }) => theme.breakpoints.desktop};
   width: 100%;
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    margin: 50px 0;
+    flex-direction: row;
+  }
   @media print {
     line-height: 1;
     margin: 0;
@@ -89,12 +101,32 @@ const LeftContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  width: 30%;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.dark};
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    width: 30%;
+  }
   @media print {
     font-size: 0.8rem;
     border-right: 1px solid ${({ theme }) => theme.colors.ligthGreen};
     height: 100vh;
+  }
+`;
+
+const MobileContainer = styled(LeftContainer)`
+  display: flex;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    display: none;
+  }
+`;
+
+const DesktopContainer = styled.div`
+  display: none;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -104,8 +136,12 @@ const RightContainer = styled.div`
   align-items: start;
   justify-content: center;
   height: 100%;
-  width: 70%;
+  width: 100%;
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
+    width: 70%;
+  }
   @media print {
+    width: 70%;
     font-size: 0.8rem;
     line-height: 0.8;
     p {
@@ -127,10 +163,10 @@ const Button = styled.button`
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  margin: 0 0 40px 0;
   cursor: pointer;
+  margin: 40px 0;
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 2rem;
+    margin: 0 0 40px 0;
   }
 `;
 
