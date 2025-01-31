@@ -64,7 +64,7 @@ const GlobalStyles = createGlobalStyle`
             font-size: 1rem;
         }
         @media print {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
     }
     a{

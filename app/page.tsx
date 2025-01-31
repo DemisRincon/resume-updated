@@ -104,7 +104,7 @@ const LeftContainer = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.dark};
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
-    width: 25%;
+    width: 30%;
   }
   @media print {
     font-size: 0.8rem;
@@ -138,7 +138,7 @@ const RightContainer = styled.div`
   height: 100%;
   width: 100%;
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}), print {
-    width: 75%;
+    width: 70%;
   }
   @media print {
     width: 70%;
