@@ -8,10 +8,12 @@ import {
   SiMongodb,
 } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
+import { PiPersonSimpleRunBold } from "react-icons/pi";
 
 const frameworksTools = {
   name: "FRAMEWORKS & TOOLS",
   list: [
+    { title: "Agile methodology", icon: PiPersonSimpleRunBold },
     { title: "React.js", icon: FaReact },
     { title: "React Native", icon: FaReact },
     { title: "Next.js", icon: SiNextdotjs },
