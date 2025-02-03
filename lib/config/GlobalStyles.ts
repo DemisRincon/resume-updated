@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import defaultTheme from "./defaultTheme";
-import { Poppins, Bebas_Neue, Roboto, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
   weight: "400",
