@@ -1,13 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 import defaultTheme from "./defaultTheme";
-import { Poppins } from "next/font/google";
+import { Poppins, Bebas_Neue, Roboto, Montserrat } from "next/font/google";
 
-const poppins = Poppins({ subsets: ["latin-ext"], weight: "200" });
+const montserrat = Montserrat({
+  weight: "400",
+  style: "normal",
+  subsets: ["cyrillic"],
+});
+
 const GlobalStyles = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        font-family: ${poppins.style.fontFamily};
+        font-family: ${montserrat.style.fontFamily};
+        @media  print {
+            font-family: ${montserrat.style.fontFamily};
+            font-weight: 400;
+            size: 5.5in 8.5in ;
+                  size: landscape;
+        }
     }
  
     h1, h2, h3, h4, h5, h6 {
